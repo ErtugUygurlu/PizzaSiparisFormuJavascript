@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pizza Sipariş</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h3 class="baslik">PİZZA SİPARİŞ FORMU</h3>
+    <form action="" id="formPizza">
+        <label for="listePizza">Pizza boyutunu seçiniz:</label>
+        <select name="" id="listePizza" size="5">
+            <option value="90">Küçük boy</option>
+            <option value="120">Orta boy</option>
+            <option value="150">Büyük boy</option>
+            <option value="180">Süper boy</option>
+            <option value="210">Mega boy</option>
+
+        </select>
+        <label for="grupEkMalzeme">Ek malzeme seçiniz:</label>
+        <span>
+            <label for="mal1">Peperoni</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal1" value="Peperoni">
+            <label for="mal2">Sucuk</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal2" value="Sucuk">
+            <label for="mal3">Pastırma</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal3" value="Pastırma">
+            <label for="mal4">Kavurma</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal4" value="Kavurma">
+            <label for="mal5">Jambon</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal5" value="Jambon">
+            <label for="mal6">TonBalığı</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal6" value="TonBalığı">
+            <label for="mal6">Salam</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal7" value="Salam">
+            <label for="mal6">Sosis</label>
+            <input type="checkbox" name="grupEkMalzeme" id="mal8" value="Sosis">
+            
+        </span>
+        <label for="listeEkSecimler">Seçtiğiniz ek malzemeler:</label>
+        <select name="" id="listeEkSecimler" size="8">
+
+        </select>
+        <label for="grupIndirim">İndirim kodunu giriniz:</label>
+        <span>
+            <label for="kodTrue">İndirim kodum var</label>
+            <input type="radio" name="grupIndirim" id="kodTrue" value="Aktif" onchange="toogle();">
+            <label for="kodFalse">İndirim kodum yok</label>
+            <input type="radio" name="grupIndirim" id="kodFalse" value="Pasif" onchange="toogle();" checked>           
+        </span>
+        <label for="txtIndirimKodu">İndirim kodunu giriniz:</label>
+        <input type="text" name="" id="txtIndirimKodu" disabled >
+        <input type="button" value="Hesapla/Doğrula" id="btnHesapla" onclick="pizzaHesapla();">
+
+    </form>
+    <h5 id="sonuc"></h5>
+    <h5 id="dogrulama" style="color:red"></h5>
+</body>
+</html>
